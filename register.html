@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voting Panel</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+    <style>
+        .specialHead {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .normalFont {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" style="padding: 50px;">
+        <div class="row">
+            <div class="col-sm-12" style="border:2px solid rgb(226, 226, 226);
+            box-shadow: 5px 5px 10px rgb(162, 220, 247);">
+
+                <div class="page-header">
+                    <h2 class="specialHead">Register for Online Voting.</h2>
+                    <p class="normalFont">Every Vote Counts.</p>
+                </div>
+
+                <form action="registerVoters.php" method="POST">
+                    <div class="form-group">
+                        <label>Voter's Name :</label><br>
+
+                        <input type="text" name="RegistrantName" pattern="^(\w\w+)\s(\w+)$" title="Full Name" 
+                        placeholder="Enter Your Full Name"
+                        class="form-control" required /><br>
+
+                        <label>Enter your Email Id :</label><br>
+                        <input type="text" name="RegistrantEmail" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "Enter a valid email address" 
+                        placeholder="Email ID" class="form-control" required/><br>
+
+                        <label>Enter Password :</label><br>
+                        <input type="password" name="RegistrantPassword" pattern = ".{8,}" 
+                        title = "Password is atleast 8 character long "placeholder="Password"
+                        class="form-control" required/><br>
+
+                        <label>Enter Voter ID :</label><br>
+                        <input id="id1" type="text" name="RegistrantvoterID" pattern="[0-9].{6}" 
+                        title = "Invalid ID" placeholder="7 digit Voter ID"
+                            class="form-control" required /><br>
+                        <center>
+                            <input type="checkbox" required/>
+                            <label>Above entered data is correct to best of my knowledge and belief.</label><br>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        </center>
+
+
+                        </label>
+                    </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Feedback Form</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+    <style>
+        .headerFont {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 24px;
+        }
+
+        .subFont {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+
+        }
+
+        .specialHead {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .normalFont {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse
+    " role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand headerFont text-lg">Home</a>
+                </div>
+
+            </div>
+        </nav>
+        <form action="feedbackReport.php" method="POST">
+        <div class="container" style="padding:100px;">
+            <div class="row">
+                <div class="col-sm-12" style="border:2px solid gray;
+                    box-shadow: 8px 8px 20px rgb(162, 220, 247);">
+
+                    <div class="page-header">
+                        <h2 class="specialHead">Voter's Feedback</h2>
+                        <p class="normalFont">Your Feedback makes us better.</p>
+
+                        <label>Enter Voter ID :</label><br>
+                        <input type="text" name="feedbackVoterID" pattern="[0-9].{6}" title="Invalid ID"
+                            placeholder="7 digit Voter ID" class="form-control" style="width:300px" required />
+                        <br>
+                        <label>Enter Email ID :</label><br>
+                        <input type="text" name="feedbackMailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Enter a valid email address" placeholder="Email ID" class="form-control"
+                            style="width:300px" required />
+                        <br>
+
+                        <label>Write Feedback :</label><br>
+                        <textarea name="feedbackSubject" placeholder="Write your feedback here." class="form-control"
+                            style="height:200px" required></textarea>
+                        <br>
+                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
